@@ -1,0 +1,16 @@
+#!/bin/bash
+
+basename=$1
+filename=${basename%.*}
+
+if [ -a ${filename}.aux ]; then
+	rm ${filename}.aux
+fi
+
+if [ -a ${filename}.dvi ]; then
+	rm ${filename}.dvi
+fi
+
+if [ -a ${filename}.log ]; then
+	rm ${filename}.log
+fi
